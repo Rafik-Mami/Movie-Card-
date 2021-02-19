@@ -8,8 +8,8 @@ function MovieList({movies,name,rating,AddMovie}) {
            movie.title.toLowerCase().includes(name.toLowerCase()) && movie.rate >=rating ).
            
            map(movie =>
-            <MovieCard movie={movie} addMovie={true}/>)}
-            <MovieCard addMovie={false} AddMovie={AddMovie}/>
+            <MovieCard movie={movie} addMovie={true}  key={movie.id}/>)}
+            <MovieCard addMovie={false} AddMovie={AddMovie}  />
         </div>
     )
 }
